@@ -11,9 +11,10 @@ const Header = () => {
             <span className="text-2xl font-bold text-blue-900">IIT Tirupati Water Monitor</span>
           </div>
           <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-600 hover:text-blue-600">Home</a>
-            <a href="#statistics" className="text-gray-600 hover:text-blue-600">Statistics</a>
-            <a href="#about" className="text-gray-600 hover:text-blue-600">About</a>
+            <a href="/" className="text-gray-600 hover:text-blue-600">Home</a>
+            <a href="/statistics" className="text-gray-600 hover:text-blue-600">Statistics</a>
+            <a href="/about" className="text-gray-600 hover:text-blue-600">About</a>
+            <a href="/tests" className="text-gray-600 hover:text-blue-600">Tests</a>
           </div>
         </div>
       </nav>
