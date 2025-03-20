@@ -41,12 +41,12 @@ const Statistics = () => {
           </div>
         </div>
 
-        {/* Image Display */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Drinking Water Rating Distribution */}
+        {/* Grid for Bar Charts and Pie Charts */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {/* Drinking Water - Bar Chart */}
           <div className="bg-white p-6 rounded-xl shadow-lg">
             <h3 className="text-xl font-semibold text-center mb-6">
-              Tap Water Rating Distribution
+              Drinking Water - Bar Chart
             </h3>
             <img
               src={`${IMAGE_BASE_URL}drinking_water_rating_bar_${selectedHostel}.png`}
@@ -56,27 +56,40 @@ const Statistics = () => {
             />
           </div>
 
-          {/* Monthly Tap Water Rating */}
+          {/* Tap Water - Bar Chart */}
           <div className="bg-white p-6 rounded-xl shadow-lg">
             <h3 className="text-xl font-semibold text-center mb-6">
-              Monthly Tap Water Rating
+              Tap Water - Bar Chart
             </h3>
             <img
               src={`${IMAGE_BASE_URL}tap_water_rating_bar_${selectedHostel}.png`}
-              alt={`Monthly Tap Water Rating for ${selectedHostel}`}
+              alt={`Tap Water Rating for ${selectedHostel}`}
               className="w-full h-auto rounded-lg"
               onError={(e) => (e.currentTarget.src = "/placeholder.png")}
             />
           </div>
 
-          {/* Monthly Drinking Water Rating */}
+          {/* Drinking Water - Pie Chart */}
           <div className="bg-white p-6 rounded-xl shadow-lg">
             <h3 className="text-xl font-semibold text-center mb-6">
-              Monthly Drinking Water Rating
+              Drinking Water - Pie Chart
             </h3>
             <img
-              src={`${IMAGE_BASE_URL}drinking_water_rating_${selectedHostel}.png`}
-              alt={`Monthly Drinking Water Rating for ${selectedHostel}`}
+              src={`${IMAGE_BASE_URL}drinking_water_rating_pie_${selectedHostel}.png`}
+              alt={`Drinking Water Pie Chart for ${selectedHostel}`}
+              className="w-full h-auto rounded-lg"
+              onError={(e) => (e.currentTarget.src = "/placeholder.png")}
+            />
+          </div>
+
+          {/* Tap Water - Pie Chart */}
+          <div className="bg-white p-6 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold text-center mb-6">
+              Tap Water - Pie Chart
+            </h3>
+            <img
+              src={`${IMAGE_BASE_URL}tap_water_rating_pie_${selectedHostel}.png`}
+              alt={`Tap Water Pie Chart for ${selectedHostel}`}
               className="w-full h-auto rounded-lg"
               onError={(e) => (e.currentTarget.src = "/placeholder.png")}
             />

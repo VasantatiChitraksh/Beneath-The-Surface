@@ -8,31 +8,41 @@ const About = () => {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <InfoIcon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">About the Initiative</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              About the Project
+            </h2>
           </div>
 
-          <div className="prose lg:prose-lg mx-auto">
-            <p className="text-gray-600 mb-6">
-              The Water Usage Monitoring System at IIT Tirupati is a comprehensive initiative to track and analyze water consumption patterns across our campus. This system provides real-time insights into water usage, helping us implement data-driven conservation strategies.
+          <div className="text-gray-700 text-lg leading-relaxed">
+            <p className="mb-6">
+              The <strong>Water Quality and Consumption Monitoring System</strong> at 
+              <strong> IIT Tirupati</strong> is an initiative designed to collect and analyze 
+              water usage data across various hostels. We gather survey responses from 
+              students and staff regarding their experiences with drinking water and tap water quality.
+            </p>
+            
+            <p className="mb-6">
+              Our project presents <strong>interactive visualizations</strong>, including 
+              <strong> pie charts</strong> and <strong>bar graphs</strong>, that illustrate key 
+              water quality trends in each hostel. This enables us to identify patterns 
+              in water usage and potential areas for improvement.
             </p>
 
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Objectives</h3>
-            <ul className="list-disc list-inside text-gray-600 mb-6">
-              <li>Monitor real-time water consumption across campus locations</li>
-              <li>Identify usage patterns and potential areas for conservation</li>
-              <li>Implement data-driven water management strategies</li>
-              <li>Track conservation progress and impact</li>
-              <li>Promote sustainable water usage practices</li>
-            </ul>
+            <p className="mb-6">
+              Additionally, we conduct <strong>laboratory testing</strong> on water samples 
+              from different hostels and campus locations. These tests measure essential 
+              parameters such as <strong>pH, alkalinity, acidity, turbidity</strong>, and 
+              other <strong>quality indicators</strong>, ensuring that the water meets safety standards.
+            </p>
 
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h4 className="text-lg font-semibold text-blue-900 mb-2">Contact Us</h4>
-              <p className="text-gray-600">
-                For any queries about the monitoring system, please contact:<br />
-                Email: water.monitoring@iittp.ac.in<br />
-                Phone: +91-XXX-XXX-XXXX
-              </p>
-            </div>
+            <p className="mb-6">
+              Through this initiative, we aim to <strong>raise awareness</strong> about 
+              water quality and conservation. By analyzing the data and sharing insights, 
+              we educate the campus community about <strong>the importance of water purity 
+              and responsible consumption</strong>. Our goal is to encourage 
+              <strong> informed decision-making and sustainable water management practices</strong> 
+              for a healthier campus environment.
+            </p>
           </div>
         </div>
       </div>
