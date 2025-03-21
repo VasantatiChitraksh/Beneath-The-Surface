@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { BarChart3Icon } from "lucide-react";
 
 // Define base URL for the Flask server
-const IMAGE_BASE_URL = "http://127.0.0.1:5000/images/";
+const IMAGE_BASE_URL = import.meta.env.VITE_IMAGE_BASE_URL || "http://127.0.0.1:5000/images/";
+
 
 const hostels = [
   "Kedhar",
