@@ -1,14 +1,11 @@
 from flask import Flask, send_from_directory
-import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 
-# Define the folder where images are stored
-IMAGE_FOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static', 'images')
+# Route to serve static files (images)
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory(app.static_folder, filename)
 
-@app.route('/images/<filename>')
-def serve_image(filename):
-    return send_from_directory(IMAGE_FOLDER, filename)
-
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
