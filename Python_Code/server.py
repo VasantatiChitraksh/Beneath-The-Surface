@@ -1,7 +1,11 @@
 from flask import Flask, send_from_directory
+from flask_cors import CORS  # Import CORS to handle cross-origin requests
 import os
 
 app = Flask(__name__, static_folder="static")
+
+# Enable CORS for all routes
+CORS(app)
 
 @app.route('/static/images/<path:filename>')
 def serve_static(filename):
