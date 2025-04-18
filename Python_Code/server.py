@@ -11,4 +11,6 @@ def serve_static(filename):
     return send_from_directory(image_dir, filename)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    # Use the PORT environment variable provided by Render (or fallback to 5000 if not set)
+    port = int(os.getenv("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
