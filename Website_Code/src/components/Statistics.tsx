@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BarChart3Icon } from "lucide-react";
 
 // Define base URL for the Flask server
-const IMAGE_BASE_URL = "http://127.0.0.1:5000/static/images/";  // Corrected path for the images
+const IMAGE_BASE_URL = "https://beneath-the-surface-backend.onrender.com";  // Corrected path for the images
 
 
 
