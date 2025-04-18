@@ -4,6 +4,7 @@ import { BarChart3Icon } from "lucide-react";
 // Define base URL for the Flask server
 const IMAGE_BASE_URL = "https://beneath-the-surface-backend.onrender.com/static/images/";
 
+
 const hostels = [
   "Kedhar",
   "Bhairav",
