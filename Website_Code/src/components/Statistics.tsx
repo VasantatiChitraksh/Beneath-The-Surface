@@ -9,7 +9,7 @@ const hostels = [
   "Kedhar",
   "Bhairav",
   "Sahana",
-  "Basant",
+  "basant",
   "Des",
   "Malhar",
   "Abheri",
