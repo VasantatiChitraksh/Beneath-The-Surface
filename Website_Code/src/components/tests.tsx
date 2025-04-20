@@ -94,6 +94,7 @@ import React, { useState } from 'react';
 
 function Tests() {
   const [selectedTest, setSelectedTest] = useState('test-1');
+  const [darkMode, setDarkMode] = useState(true); // Toggle for light/dark mode
 
   const acceptableLimits = { turbidity: 1, hardness: 200, alkalinity: 200 };
   const permissibleLimits = { turbidity: 5, hardness: 600, alkalinity: 600 };
@@ -110,7 +111,7 @@ function Tests() {
     { name: "Des", pH: 7.08, turbidity: 0.8, hardness: 147.5, alkalinity: 150, acidity: 15 },
     { name: "Ground Water", pH: 7.05, turbidity: 2.82, hardness: 160, alkalinity: 200, acidity: 15 }
   ];
-  
+
   const testOptions = [
     { id: 'test-1', name: 'Hardness', key: 'hardness', unit: 'mg/L as CaCO₃', description: 'Measures the concentration of dissolved calcium and magnesium in water, indicating water hardness.' },
     { id: 'test-2', name: 'pH Level', key: 'pH', unit: '', description: 'Determines the acidity or alkalinity of water, with a neutral value of 7.' },
@@ -120,15 +121,21 @@ function Tests() {
   ];
 
   const selectedTestObj = testOptions.find(test => test.id === selectedTest) || testOptions[0];
-  
   const showLimits = ['hardness', 'alkalinity', 'turbidity'].includes(selectedTestObj.key);
-  
+
   return (
-    
     <div className="min-h-[calc(100vh-4.15rem)] h-[calc(100vh-4.15rem)] flex overflow-hidden">
+      
       {/* Left Panel */}
-      <div className="w-1/3 p-8 border-r border-gray-200 flex flex-col bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900">
-        <h1 className="text-5xl font-bold mb-12 text-white font-montserrat font-light">Tests</h1>
+      <div className={`w-1/3 p-8 border-r border-gray-200 flex flex-col ${darkMode ? 'bg-gradient-to-br from-black via-gray-900 to-black' : 'bg-gradient-to-br from-blue-700 via-blue-800 to-blue-900'}`}>
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="mb-6 px-4 py-2 text-sm font-medium rounded-lg bg-white text-black hover:bg-gray-100 self-start"
+        >
+          {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+        </button>
+
+        <h1 className={`text-5xl font-bold mb-12 font-montserrat font-light ${darkMode ? 'text-white' : 'text-white'}`}>Tests</h1>
         
         <label htmlFor="test-type" className="block text-2xl font-medium mb-4 text-white">
           Select Test Type
@@ -137,7 +144,7 @@ function Tests() {
           id="test-type"
           value={selectedTest}
           onChange={(e) => setSelectedTest(e.target.value)}
-          className="mt-1 block w-full border-gray-300 h-7 bg-white bg-opacity-90 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm  "
+          className="mt-1 block w-full border-gray-300 h-7 bg-white bg-opacity-90 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
         >
           {testOptions.map((option) => (
             <option key={option.id} value={option.id}>{option.name}</option>
@@ -173,24 +180,24 @@ function Tests() {
           rows={6}
           readOnly
           className="block w-full text-white rounded-md border-gray-300 bg-white bg-opacity-10 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm overflow-y-auto resize-none p-4"
-        /> 
+        />
       </div>
 
       {/* Right Panel */}
-      <div className="w-2/3 bg-gray-50 p-8 overflow-auto">
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className={`${darkMode ? 'bg-gradient-to-br from-black via-gray-900 to-black text-white' : 'bg-gray-50 text-gray-900'} w-2/3 p-8 overflow-auto`}>
+        <div className={`rounded-lg shadow-lg overflow-hidden ${darkMode ? 'bg-black bg-opacity-60' : 'bg-white'}`}>
           <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+            <thead className={`${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-500'}`}>
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value</th>
+                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Location</th>
+                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Value</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className={darkMode ? 'divide-y divide-gray-700' : 'divide-y divide-gray-200'}>
               {locations.map((row, index) => (
-                <tr key={index} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{row.name}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <tr key={index} className={`${darkMode ? 'hover:bg-gray-800' : 'hover:bg-gray-50'}`}>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">{row.name}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm">
                     {row[selectedTestObj.key]} {selectedTestObj.unit}
                   </td>
                 </tr>
