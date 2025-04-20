@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { BarChart3Icon } from "lucide-react";
 
-// Define base URL for the Flask server
-const IMAGE_BASE_URL = "../../public/";
-
-
 const hostels = [
   "Kedhar",
   "Bhairav",
@@ -50,7 +46,7 @@ const Statistics = () => {
               Drinking Water - Bar Chart
             </h3>
             <img
-              src={`${IMAGE_BASE_URL}drinking_water_rating_bar_${selectedHostel}.png`}
+              src={`/drinking_water_rating_bar_${selectedHostel}.png`}
               alt={`Drinking Water Rating for ${selectedHostel}`}
               className="w-full h-auto rounded-lg"
               onError={(e) => (e.currentTarget.src = "/placeholder.png")}
@@ -63,7 +59,7 @@ const Statistics = () => {
               Tap Water - Bar Chart
             </h3>
             <img
-              src={`${IMAGE_BASE_URL}tap_water_rating_bar_${selectedHostel}.png`}
+              src={`/tap_water_rating_bar_${selectedHostel}.png`}
               alt={`Tap Water Rating for ${selectedHostel}`}
               className="w-full h-auto rounded-lg"
               onError={(e) => (e.currentTarget.src = "/placeholder.png")}
@@ -76,7 +72,7 @@ const Statistics = () => {
               Drinking Water - Pie Chart
             </h3>
             <img
-              src={`${IMAGE_BASE_URL}drinking_water_rating_pie_${selectedHostel}.png`}
+              src={`/drinking_water_rating_pie_${selectedHostel}.png`}
               alt={`Drinking Water Pie Chart for ${selectedHostel}`}
               className="w-full h-auto rounded-lg"
               onError={(e) => (e.currentTarget.src = "/placeholder.png")}
@@ -89,7 +85,7 @@ const Statistics = () => {
               Tap Water - Pie Chart
             </h3>
             <img
-              src={`${IMAGE_BASE_URL}tap_water_rating_pie_${selectedHostel}.png`}
+              src={`/tap_water_rating_pie_${selectedHostel}.png`}
               alt={`Tap Water Pie Chart for ${selectedHostel}`}
               className="w-full h-auto rounded-lg"
               onError={(e) => (e.currentTarget.src = "/placeholder.png")}
