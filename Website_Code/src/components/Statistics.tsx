@@ -6,7 +6,7 @@ const hostels = [
   "Kedhar",
   "Bhairav",
   "Sahana",
-  "basant",
+  "Basant",
   "Des",
   "Malhar",
   "Abheri",
@@ -34,7 +34,7 @@ const Statistics = () => {
   return (
     <section
       id="statistics"
-      className={`min-h-screen py-16 px-4 transition-all duration-500 ease-in-out ${bgStyle}`}
+      className={`min-h-screen py-16 px-4 transition-all duration-500 ease-in-out ${bgStyle} font-sans`}
     >
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
@@ -71,7 +71,7 @@ const Statistics = () => {
 
         {/* Chart Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {[
+          {[ 
             "drinking_water_rating_bar",
             "tap_water_rating_bar",
             "drinking_water_rating_pie",
