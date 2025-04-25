@@ -5,7 +5,7 @@ import Statistics from './components/Statistics';
 import SurveyForm from './components/SurveyForm';
 import Header from './components/Header';
 import Homepage from './components/homepage';
-import Tests from './components/Tests';
+import Tests from './components/tests';
 import Game from './components/Game';
 
 const App: React.FC = () => {
