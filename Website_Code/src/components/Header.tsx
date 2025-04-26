@@ -1,5 +1,6 @@
 import React from 'react';
 import { DropletIcon } from 'lucide-react';
+import { Link } from 'react-router-dom'; // ✅ IMPORTANT!
 
 const Header = () => {
   return (
@@ -9,43 +10,43 @@ const Header = () => {
           {/* Logo Section */}
           <div className="flex items-center space-x-2">
             <DropletIcon className="h-8 w-8 text-blue-500" />
-            <a href="/" className="text-2xl font-bold text-white">
+            <Link to="/" className="text-2xl font-bold text-white">
               Beneath The Surface
-            </a>
+            </Link>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-blue-400 hover:text-white hover:underline hover:underline-offset-4 transition-all"
             >
               Home
-            </a>
-            <a
-              href="/statistics"
+            </Link>
+            <Link
+              to="/statistics"
               className="text-blue-400 hover:text-white hover:underline hover:underline-offset-4 transition-all"
             >
               Statistics
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="text-blue-400 hover:text-white hover:underline hover:underline-offset-4 transition-all"
             >
               About
-            </a>
-            <a
-              href="/tests"
+            </Link>
+            <Link
+              to="/tests"
               className="text-blue-400 hover:text-white hover:underline hover:underline-offset-4 transition-all"
             >
               Tests
-            </a>
-            <a
-              href="/game"
+            </Link>
+            <Link
+              to="/game"
               className="text-blue-400 hover:text-white hover:underline hover:underline-offset-4 transition-all"
             >
               Game
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
