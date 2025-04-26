@@ -6,7 +6,6 @@ import About from './About';
 const Homepage: React.FC = () => {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col transition-colors duration-500">
-
       <main className="flex-grow">
         <Hero />
         <Statistics />
