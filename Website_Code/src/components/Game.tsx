@@ -9,8 +9,9 @@ function Game() {
     { step: "Step 2: Download the Game", detail: "On the redirected page, find and download the `game.zip` file to your device." },
     { step: "Step 3: Extract the File", detail: "Locate the downloaded zip file and extract its contents." },
     { step: "Step 4: Install the Game", detail: "Run the setup or installation file inside the extracted folder." },
-    { step: "Step 5: Enjoy!", detail: "Launch EcoSplash and dive into an immersive water conservation adventure!" }
-  ];
+    { step: "Step 5: Enjoy!", detail: "Launch EcoSplash and dive into an immersive water conservation adventure!" },
+    { step: "Step 6: Controls Info", detail: "Press the 'M' key during gameplay to view controls for each level." } 
+  
 
   return (
     <div className="relative min-h-screen overflow-hidden font-sans"> {/* Added font-sans class */}
