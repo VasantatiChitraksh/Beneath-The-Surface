@@ -1,12 +1,12 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
-import { BarChart3Icon } from 'lucide-react';
-import About from "./components/About";
-import Statistics from "./components/Statistics";
-import SurveyForm from "./components/SurveyForm";
+import { Routes, Route } from 'react-router-dom';
+import About from './components/About';
+import Statistics from './components/Statistics';
+import SurveyForm from './components/SurveyForm';
 import Header from './components/Header';
 import Homepage from './components/homepage';
 import Tests from './components/tests';
+import Game from './components/Game';
 
 const App: React.FC = () => {
   return (
@@ -17,10 +17,11 @@ const App: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/statistics" element={<Statistics />} />
         <Route path="/survey" element={<SurveyForm />} />
-        <Route path="/tests" element={<Tests/>}/>
+        <Route path="/tests" element={<Tests />} />
+        <Route path="/game" element={<Game />} />
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

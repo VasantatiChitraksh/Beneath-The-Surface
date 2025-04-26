@@ -78,10 +78,10 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl text-white text-center">
-          <h1 className="text-5xl font-bold mb-6">Water Usage Monitoring</h1>
+          <h1 className="text-5xl font-bold mb-6">Beneath The Surface</h1>
           <p className="text-xl mb-8">
-            Real-time water consumption analytics and insights across IIT Tirupati campus locations. 
-            Making data-driven decisions for a sustainable future.
+          Water consumption analytics and quality insights based on collected data from IIT Tirupati hostels.
+          Empowering data-driven decisions for sustainable campus water management.
           </p>
           <a
             href="#statistics"
