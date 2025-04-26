@@ -11,6 +11,7 @@ function Game() {
     { step: "Step 4: Install the Game", detail: "Run the setup or installation file inside the extracted folder." },
     { step: "Step 5: Enjoy!", detail: "Launch EcoSplash and dive into an immersive water conservation adventure!" },
     { step: "Step 6: Controls Info", detail: "Press the 'M' key during gameplay to view controls for each level." } 
+  ]
   
 
   return (
