@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Homepage from './components/homepage';
 import Tests from './components/tests';
 import Game from './components/Game';
+import Prototype from './components/Prototype';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
         <Route path="/survey" element={<SurveyForm />} />
         <Route path="/tests" element={<Tests />} />
         <Route path="/game" element={<Game />} />
+        <Route path="/Prototype" element={<Prototype/>} />
       </Routes>
     </div>
   );
