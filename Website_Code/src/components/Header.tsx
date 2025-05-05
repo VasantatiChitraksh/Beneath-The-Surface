@@ -47,6 +47,12 @@ const Header = () => {
             >
               Game
             </Link>
+            <Link
+              to="/Prototype"
+              className="text-blue-400 hover:text-white hover:underline hover:underline-offset-4 transition-all"
+            >
+              Prototype
+            </Link>
           </div>
         </div>
       </nav>
